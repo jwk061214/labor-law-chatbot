@@ -37,3 +37,28 @@ uvicorn main:app --reload
 # 프론트 실행
 cd frontend
 streamlit run app.py
+
+## 📊 주요 기능 (Features)
+
+- 🤖 **Chatbot** : 노동법 Q&A 대화형 상담  
+- 📑 **Law Search** : 주제별 법령 검색 (임금, 근로계약, 휴가 등)  
+- 📂 **Case Examples** : 실제 판례/사례 데이터 조회  
+- 📊 **Statistics** : 가장 많이 질문된 키워드 통계 시각화  
+- ℹ️ **About** : 프로젝트 및 팀 소개  
+
+---
+
+## 👥 Team
+
+| 이름 | 역할 | 담당 |
+|------|------|------|
+| **강지우** | Backend | FastAPI, DB 연동 |
+| Team Member A | Frontend | Streamlit UI/UX |
+| Team Member B | AI | LangChain & LLM |
+
+---
+
+## 📌 향후 발전 방향
+- 다국어 지원 (영어/중국어/베트남어 등)  
+- 실제 판례 데이터셋 확장  
+- 사용자별 맞춤형 상담 기능  
