@@ -1,19 +1,19 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from backend.routers import chatbot, law, cases, stats, about
 
-app = FastAPI(title="Labor Law Chatbot")
+app = FastAPI(
+    title="Labor Law Assistant",
+    description="노동법 관련 문서 조회 및 Q/A 챗봇 서비스",
+    version="0.1.0"
+)
 
-class Question(BaseModel):
-    text: str
+# 라우터 등록
+app.include_router(chatbot.router, prefix="/chat", tags=["Chatbot"])
+app.include_router(law.router, prefix="/law", tags=["Law"])
+app.include_router(cases.router, prefix="/cases", tags=["Cases"])
+app.include_router(stats.router, prefix="/stats", tags=["Statistics"])
+app.include_router(about.router, prefix="/about", tags=["About"])
 
-@app.post("/ask")
-def ask_question(q: Question):
-    answers = {
-        "임금": "임금은 매월 1회 이상, 일정한 날짜에 지급해야 합니다.",
-        "근로계약": "근로계약은 반드시 서면으로 작성해야 합니다.",
-        "휴가": "근로자는 1년에 15일 이상의 유급휴가를 가질 권리가 있습니다."
-    }
-    for key, ans in answers.items():
-        if key in q.text:
-            return {"answer": ans}
-    return {"answer": "관련 법률 문서를 찾을 수 없습니다."}
+@app.get("/ping")
+def ping():
+    return {"msg": "pong"}
