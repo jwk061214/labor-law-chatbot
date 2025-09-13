@@ -33,11 +33,12 @@
 # 백엔드 실행
 cd backend
 uvicorn main:app --reload
-
+```
 # 프론트 실행
+```bash
 cd frontend
 streamlit run app.py
-
+```
 ## 📊 주요 기능 (Features)
 
 - 🤖 **Chatbot** : 노동법 Q&A 대화형 상담  
