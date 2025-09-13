@@ -5,12 +5,19 @@
 
 ---
 
-## 🛠 Tech Stack
-- 🚀 FastAPI (백엔드 API)
-- 🎨 Streamlit (프론트엔드 UI)
-- 🔥 Firebase (DB)
-- 🧠 LangChain (LLM 연동)
-- 🐙 GitHub (협업 & 버전관리)
+## 🛠️ Tech Stack
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python"/>
+  <img src="https://img.shields.io/badge/FastAPI-0.95-green?logo=fastapi"/>
+  <img src="https://img.shields.io/badge/Streamlit-1.26-FF4B4B?logo=streamlit"/>
+  <img src="https://img.shields.io/badge/Firebase-Database-orange?logo=firebase"/>
+  <img src="https://img.shields.io/badge/LangChain-LLM-yellow?logo=openai"/>
+</p>
+
+- **Backend** : FastAPI  
+- **Frontend** : Streamlit  
+- **Database** : Firebase  
+- **AI/LLM** : LangChain  
 
 ---
 
